@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigClientController {
     @Value("${spring.application.name}")
     private String applicationName;
- 
+
     @Value("${eureka.client.service-url.defaultZone}")
     private String eurekaServer;
- 
+
     @Value("${server.port}")
     private String port;
- 
+
     @RequestMapping("/config")
-    public String getConfig(){
-        return "applicationName: "+applicationName+
-                "eurekaServer: "+eurekaServer+
-                "port: "+port;
+    public String getConfig() {
+        return "applicationName: " + applicationName +
+                "eurekaServer: " + eurekaServer +
+                "port: " + port;
     }
 }
